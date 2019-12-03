@@ -8,6 +8,12 @@ const App = () => {
   return (
     <div className="ui container comments">
       <ApprovalCard>
+        <div>
+          <h1>QUESTION !!!</h1>
+          React is Awesome so Far !!!
+        </div>
+      </ApprovalCard>
+      <ApprovalCard>
         <CommentDetail
           img={faker.image.avatar()}
           author="Sam"
