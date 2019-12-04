@@ -9,19 +9,15 @@ class App extends React.Component {
       lat: null,
       errorMessage: ""
     };
-    // Ova go premestivme. Za da ne se povikuva na sekoe od render ko che imame update na componento. Ednas e povikano i posle mozi render da se apdejtira kolku so saka pati...
+  }
+
+  componentDidMount() {
     window.navigator.geolocation.getCurrentPosition(
-      // console.log(position)
-      position => {
-        // We called setState
-        this.setState({ lat: position.coords.latitude });
-      },
-      // console.log(err)
-      err => {
-        this.setState({ errorMessage: err.message });
-      }
+      position => this.setState({ lat: position.coords.latitude }),
+      err => this.setState({ errorMessage: err.message })
     );
   }
+
   // componentDidMount() {
   //   console.log("My Component was rendered to the screen");
   // }
