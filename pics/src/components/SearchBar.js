@@ -1,10 +1,8 @@
 import React from "react";
 
 class SearchBar extends React.Component {
-  // onInputChange(event) {
-  //   event.preventDefault();
-  //   console.log(event.target.value);
-  // }
+  state = { term: "" };
+
   render() {
     return (
       <div className="ui segment">
@@ -15,7 +13,8 @@ class SearchBar extends React.Component {
               type="text"
               name=""
               id=""
-              onChange={event => console.log(event.target.value)}
+              value={this.state.term}
+              onChange={e => this.setState({ term: e.target.value })}
             />
           </div>
         </form>
