@@ -1,10 +1,10 @@
 import React from "react";
 
 class SearchBar extends React.Component {
-  onInputChange(event) {
-    event.preventDefault();
-    console.log(event.target.value);
-  }
+  // onInputChange(event) {
+  //   event.preventDefault();
+  //   console.log(event.target.value);
+  // }
   render() {
     return (
       <div className="ui segment">
