@@ -2,7 +2,16 @@ import React from "react";
 
 class SearchBar extends React.Component {
   render() {
-    return <h1>SearchBar</h1>;
+    return (
+      <div className="ui segment search-bar">
+        <form action="#" className="ui form">
+          <div className="field">
+            <label htmlFor="#">Video Search</label>
+            <input type="text" />
+          </div>
+        </form>
+      </div>
+    );
   }
 }
 
