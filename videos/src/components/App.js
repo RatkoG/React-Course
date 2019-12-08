@@ -14,7 +14,7 @@ class App extends React.Component {
     // console.log(response);
     // console.log(response.data.items);
     this.setState({ videos: response.data.items });
-    console.log(this.state.videos);
+    // console.log(this.state.videos);
   };
 
   render() {
