@@ -2,6 +2,7 @@ import React from "react";
 import SearchBar from "./SearchBar";
 import youtube from "../api/youtube";
 import VideoList from "./VideoList";
+import VideoDetail from "./VideoDetail";
 class App extends React.Component {
   state = { videos: [], selectedVideo: null };
   onTermSubmit = async term => {
@@ -17,7 +18,8 @@ class App extends React.Component {
     // console.log(this.state.videos);
   };
   onVideoSelect = video => {
-    console.log("From the APP!", video);
+    // console.log("From the APP!", video);
+    this.setState({ selectedVideo: video });
   };
   render() {
     return (
@@ -25,6 +27,7 @@ class App extends React.Component {
         <SearchBar onFormSubmit={this.onTermSubmit} />
         {/* I have{" "}
         {this.state.videos.length} videos; */}
+        <VideoDetail video={this.state.selectedVideo} />
         <VideoList
           onVideoSelect={this.onVideoSelect}
           videos={this.state.videos}
