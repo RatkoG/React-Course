@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 
-const SongDetail = props => {
-  console.log(props);
+const SongDetail = song => {
+  console.log(song);
 
   return <div>Song Detail</div>;
 };
