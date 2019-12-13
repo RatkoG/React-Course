@@ -1,6 +1,5 @@
 import { combineReducers } from "redux";
-
+import postsReducer from "./postsReducer";
 export default combineReducers({
-  // This is to get the erroe message away cause we dont know what we will need
-  dummy: () => "Hi there"
+  posts: postsReducer
 });
