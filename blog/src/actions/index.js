@@ -6,13 +6,19 @@ export const fetchPosts = () => async dispatch => {
   // Ovde e response.data oti sakame samo data da vratime a ne se i sesto
   dispatch({ type: "FETCH_POSTS", payload: response.data });
 };
-// Ova e stvarno sotreba da go prajme
-export const fetchUser = id => dispatch => _fetchUser(id, dispatch);
-// Private function should not be called unless you know what are you doing
-const _fetchUser = _.memoize(async (id, dispatch) => {
+
+export const fetchUser = id => async dispatch => {
   const response = await jsonPlaceholder.get(`/users/${id}`);
   dispatch({ type: "FETCH_USER", payload: response.data });
-});
+};
+
+// // Ova e stvarno sotreba da go prajme
+// export const fetchUser = id => dispatch => _fetchUser(id, dispatch);
+// // Private function should not be called unless you know what are you doing
+// const _fetchUser = _.memoize(async (id, dispatch) => {
+//   const response = await jsonPlaceholder.get(`/users/${id}`);
+//   dispatch({ type: "FETCH_USER", payload: response.data });
+// });
 
 // Ova ovde pak ne raboti kako so treba
 // export const fetchUser = function(id) {
