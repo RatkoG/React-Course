@@ -5,7 +5,7 @@ import UserHeader from "./UserHeader";
 class PostList extends React.Component {
   componentDidMount() {
     this.props.fetchPostsAndUsers();
-    // console.log(this.props.fetchPosts);
+    // console.log(this.props.fetchPosts, "OVA E TO");
   }
   renderList() {
     return this.props.posts.map(post => {
