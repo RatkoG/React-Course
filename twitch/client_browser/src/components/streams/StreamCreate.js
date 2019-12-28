@@ -4,7 +4,16 @@ import React from "react";
 import { Field, reduxForm } from "redux-form";
 
 class StreamCreate extends React.Component {
-  renderInput({ input, label, meta }) {
+  renderError({ error, touched }) {
+    if (touched && error) {
+      return (
+        <div className="ui error message">
+          <div className="header">{error}</div>
+        </div>
+      );
+    }
+  }
+  renderInput = ({ input, label, meta }) => {
     // console.log(formProps);
     // console.log(meta);
 
@@ -12,10 +21,10 @@ class StreamCreate extends React.Component {
       <div className="field">
         <label htmlFor="">{label}</label>
         <input {...input} autoComplete="off" />
-        <div>{meta.error}</div>
+        {this.renderError(meta)}
       </div>
     );
-  }
+  };
 
   onSubmit(formValues) {
     //Ne ni treba ova vo redux
