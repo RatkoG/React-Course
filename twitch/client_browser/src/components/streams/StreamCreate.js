@@ -4,13 +4,15 @@ import React from "react";
 import { Field, reduxForm } from "redux-form";
 
 class StreamCreate extends React.Component {
-  renderInput({ input, label }) {
+  renderInput({ input, label, meta }) {
     // console.log(formProps);
+    // console.log(meta);
 
     return (
       <div className="field">
         <label htmlFor="">{label}</label>
         <input {...input} />
+        <div>{meta.error}</div>
       </div>
     );
   }
@@ -42,16 +44,15 @@ class StreamCreate extends React.Component {
 
 const validate = formValues => {
   const errors = {};
-
+  //Ovie so se vo error primer title ili description se povrzuva so name vo Field gore...
   if (!formValues.title) {
     //only ran if the user did not enter a title
     errors.title = "Please enter a title";
   }
   if (!formValues.description) {
-    errors.title = "Please enter a description";
+    errors.description = "Please enter a description";
   }
   return errors;
-  console.log(errors);
 };
 
 export default reduxForm({
