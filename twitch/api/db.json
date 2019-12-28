@@ -24,6 +24,11 @@
       "title": "My Stream",
       "description": "Horizon BMW 4",
       "id": 5
+    },
+    {
+      "title": "DIY Setup",
+      "description": "Mac Book Setup Desk",
+      "id": 6
     }
   ]
 }
