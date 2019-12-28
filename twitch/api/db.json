@@ -1,3 +1,29 @@
 {
-	"streams": []
+  "streams": [
+    {
+      "title": "Dude",
+      "description": "Do it like a dude",
+      "id": 1
+    },
+    {
+      "title": "Dude",
+      "description": "Do it like a dude",
+      "id": 2
+    },
+    {
+      "title": "My Stream",
+      "description": "Horizon 4",
+      "id": 3
+    },
+    {
+      "title": "My Stream",
+      "description": "Horizon 4",
+      "id": 4
+    },
+    {
+      "title": "My Stream",
+      "description": "Horizon BMW 4",
+      "id": 5
+    }
+  ]
 }
