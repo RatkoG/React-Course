@@ -42,6 +42,7 @@ class StreamCreate extends React.Component {
 
 const validate = formValues => {
   const errors = {};
+
   if (!formValues.title) {
     //only ran if the user did not enter a title
     errors.title = "Please enter a title";
@@ -50,8 +51,10 @@ const validate = formValues => {
     errors.title = "Please enter a description";
   }
   return errors;
+  console.log(errors);
 };
 
 export default reduxForm({
-  form: "StreamCreate"
+  form: "StreamCreate",
+  validate
 })(StreamCreate);
