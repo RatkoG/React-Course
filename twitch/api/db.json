@@ -44,6 +44,12 @@
       "title": "Dude",
       "description": "Whats up",
       "id": 9
+    },
+    {
+      "title": "I created the stream",
+      "description": "There will be my ID",
+      "userId": "100043182884876841321",
+      "id": 10
     }
   ]
 }
