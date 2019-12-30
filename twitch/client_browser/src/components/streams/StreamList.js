@@ -40,6 +40,7 @@ class StreamList extends React.Component {
           <Link to="/streams/new" className="ui button primary">
             Create Stream
           </Link>
+        </div>
       );
     }
   }
