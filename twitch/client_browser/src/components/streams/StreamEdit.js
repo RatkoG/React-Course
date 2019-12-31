@@ -3,17 +3,18 @@ import React from "react";
 import { connect } from "react-redux";
 import { fetchStream, editStream } from "../../action";
 import StreamForm from "./StreamForm";
-import { formValues } from "redux-form";
+// import { formValues } from "redux-form";
 class StreamEdit extends React.Component {
   componentDidMount() {
     this.props.fetchStream(this.props.match.params.id);
   }
   onSubmit = formValues => {
-    console.log(formValues);
+    // console.log(formValues);
+    this.props.editStream(this.props.match.params.id, formValues);
   };
 
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     //This if statement is cause Title will be rendered a bit later
     if (!this.props.stream) {
       return <div>Loading</div>;
