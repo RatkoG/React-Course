@@ -2,14 +2,19 @@
   "streams": [
     {
       "title": "New One",
-      "description": "Test",
-      "userId": "100043182884876841321",
+      "description": "Patch test ?",
       "id": 1
     },
     {
       "title": "TEST",
       "description": "Working ?",
       "id": 2
+    },
+    {
+      "title": "Change",
+      "description": "Change",
+      "userId": "100043182884876841321",
+      "id": 3
     }
   ]
 }
